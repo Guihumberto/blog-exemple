@@ -37,20 +37,12 @@
     export default {
         data(){
             return{
-                perfil:[
-                    {title: 'Foto:', response:'/url'},
-                    {title: 'Nome:', response:'Joao Humberto'},
-                    {title: 'Profissão:', response:'Auditor Fiscal'},
-                    {title: 'Sobre:', response:'Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Ratione iusto deleniti quos excepturi reiciendis pos simus molestias, ipsam vitae rem perferendis. Eos amet laboriosam consectetur! Exercitationem perspiciatis neque commodi delectus aperiam.'},
-                    {title: 'Formação:', formation:['Bacharel em Ciências Contábeis', 'Pós GraduaçãoResponsabilidade Fiscal', 'Pós Graduação em Direitro Tributário']},
-                    {title: 'Redes Sociais:', socialmidia:[
-                        {icon: 'mdi-whatsapp', url:''},
-                        {icon: 'mdi-facebook', url:''},
-                        {icon: 'mdi-instagram', url:''},
-                        {icon: 'mdi-linkedin', url:''},
-                    ]},
-                    {title: 'E-mail:', response:'juninho.joao@hotmail.com'},
-                ]
+
+            }
+        },
+        computed:{
+            perfil(){
+                return this.$store.getters.readPerfil
             }
         }
     }

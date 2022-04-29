@@ -288,6 +288,33 @@ export const state = () => ({
     ], 
     post: null,
     user:null,
+    perfil:[
+        {title: 'Foto:', response:'/url'},
+        {title: 'Nome:', response:'Joao Humberto'},
+        {title: 'Profissão:', response:'Auditor Fiscal'},
+        {title: 'Sobre:', response:'Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Ratione iusto deleniti quos excepturi reiciendis pos simus molestias, ipsam vitae rem perferendis. Eos amet laboriosam consectetur! Exercitationem perspiciatis neque commodi delectus aperiam.'},
+        {title: 'Formação:', formation:['Bacharel em Ciências Contábeis', 'Pós GraduaçãoResponsabilidade Fiscal', 'Pós Graduação em Direitro Tributário']},
+        {title: 'Redes Sociais:', socialmidia:[
+            {icon: 'mdi-whatsapp', url:''},
+            {icon: 'mdi-facebook', url:''},
+            {icon: 'mdi-instagram', url:''},
+            {icon: 'mdi-linkedin', url:''},
+        ]},
+        {title: 'E-mail:', response:'juninho.joao@hotmail.com'},
+    ],
+    author:{
+        photo:'/url',
+        name:'Joao Humberto',
+        job:'Auditor Fiscal',
+        about:'Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Ratione iusto deleniti quos excepturi reiciendis pos simus molestias, ipsam vitae rem perferendis. Eos amet laboriosam consectetur! Exercitationem perspiciatis neque commodi delectus aperiam.',
+        formation:['Bacharel em Ciências Contábeis', 'Pós GraduaçãoResponsabilidade Fiscal', 'Pós Graduação em Direitro Tributário'],
+        socialmidia:[
+            {icon: 'mdi-whatsapp', url:''},
+            {icon: 'mdi-facebook', url:''},
+            {icon: 'mdi-instagram', url:''},
+            {icon: 'mdi-linkedin', url:''},
+        ],
+        email:'juninho.joao@hotmail.com'}
 })
 
 export const getters = {
@@ -299,6 +326,12 @@ export const getters = {
     },
     readPost(state){
         return state.post
+    },
+    readPerfil(state){
+        return state.perfil
+    },
+    readAuthor(state){
+        return state.author
     }
 }
 
